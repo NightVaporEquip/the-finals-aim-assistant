@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0d12"/>
+      <stop offset="55%" stop-color="#12161d"/>
+      <stop offset="100%" stop-color="#1a0f0a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff8a2b" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#ff5a1f" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ff5a1f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffcf8a"/>
+      <stop offset="100%" stop-color="#ff5a1f"/>
+    </linearGradient>
+    <linearGradient id="headTxt" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffd6a8"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#ff7a2f" stroke-opacity="0.06" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="150" y1="0" x2="150" y2="360"/>
+    <line x1="350" y1="0" x2="350" y2="360"/>
+    <line x1="550" y1="0" x2="550" y2="360"/>
+    <line x1="750" y1="0" x2="750" y2="360"/>
+    <line x1="950" y1="0" x2="950" y2="360"/>
+    <line x1="1150" y1="0" x2="1150" y2="360"/>
+  </g>
+
+  <!-- glow behind reticle -->
+  <ellipse cx="960" cy="180" rx="260" ry="220" fill="url(#glow)"/>
+
+  <!-- targeting reticle cluster -->
+  <g>
+    <circle cx="960" cy="180" r="118" fill="none" stroke="url(#ring)" stroke-width="2.5" opacity="0.85"/>
+    <circle cx="960" cy="180" r="86" fill="none" stroke="#ff8a2b" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="960" cy="180" r="52" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.35"/>
+    <circle cx="960" cy="180" r="4" fill="#ff5a1f"/>
+
+    <!-- crosshair ticks -->
+    <line x1="960" y1="30" x2="960" y2="70" stroke="#ff8a2b" stroke-width="3"/>
+    <line x1="960" y1="290" x2="960" y2="330" stroke="#ff8a2b" stroke-width="3"/>
+    <line x1="810" y1="180" x2="850" y2="180" stroke="#ff8a2b" stroke-width="3"/>
+    <line x1="1070" y1="180" x2="1110" y2="180" stroke="#ff8a2b" stroke-width="3"/>
+
+    <!-- corner brackets -->
+    <path d="M 855 75 L 855 55 L 875 55" fill="none" stroke="#ffd6a8" stroke-width="3"/>
+    <path d="M 1065 75 L 1065 55 L 1045 55" fill="none" stroke="#ffd6a8" stroke-width="3"/>
+    <path d="M 855 285 L 855 305 L 875 305" fill="none" stroke="#ffd6a8" stroke-width="3"/>
+    <path d="M 1065 285 L 1065 305 L 1045 305" fill="none" stroke="#ffd6a8" stroke-width="3"/>
+
+    <!-- lock indicators -->
+    <polygon points="960,138 968,152 952,152" fill="#ff5a1f" opacity="0.8"/>
+    <circle cx="1005" cy="120" r="3" fill="#ffffff" opacity="0.6"/>
+    <circle cx="905" cy="240" r="3" fill="#ffffff" opacity="0.5"/>
+    <circle cx="1030" cy="230" r="2.5" fill="#ffcf8a" opacity="0.7"/>
+  </g>
+
+  <!-- speed / tracking lines sweeping left -->
+  <g stroke="#ff5a1f" stroke-opacity="0.25" stroke-width="2">
+    <line x1="60" y1="60" x2="260" y2="60"/>
+    <line x1="60" y1="90" x2="200" y2="90"/>
+    <line x1="60" y1="300" x2="220" y2="300"/>
+    <line x1="60" y1="330" x2="170" y2="330"/>
+  </g>
+
+  <!-- HUD corner frame -->
+  <path d="M 40 30 L 40 60 M 40 30 L 70 30" fill="none" stroke="#ff8a2b" stroke-width="2" opacity="0.6"/>
+  <path d="M 1160 330 L 1160 300 M 1160 330 L 1130 330" fill="none" stroke="#ff8a2b" stroke-width="2" opacity="0.6"/>
+
+  <!-- headline -->
+  <text x="60" y="168" font-family="'Segoe UI', Arial, sans-serif" font-size="80" font-weight="700"
+        fill="url(#headTxt)" textLength="760" lengthAdjust="spacingAndGlyphs">The Finals Aimbot</text>
+
+  <!-- accent underline -->
+  <rect x="62" y="188" width="220" height="5" fill="#ff5a1f" opacity="0.8"/>
+
+  <!-- tagline -->
+  <text x="60" y="238" font-family="'Segoe UI', Arial, sans-serif" fill="#d9dde3"
+        textLength="1080.0" lengthAdjust="spacingAndGlyphs" font-size="21.0">Built for gamers who need precise target tracking and aim assistance in The Finals.</text>
+
+  <!-- small tag chip -->
+  <g>
+    <rect x="60" y="266" width="150" height="30" rx="15" fill="#1e130c" stroke="#ff5a1f" stroke-width="1.5" opacity="0.8"/>
+    <text x="80" y="286" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#ffcf8a">TRACKING: ON</text>
+  </g>
+</svg>
